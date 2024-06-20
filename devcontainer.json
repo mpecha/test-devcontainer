@@ -1,0 +1,24 @@
+{
+  "build": {
+    "dockerfile": "docker/Dockerfile",
+    "options": [
+      "--no-cache"
+    ]
+  },
+
+  "runArgs": [
+    "--privileged",
+    "-it"
+  ],
+
+  "features": {
+    "ssh-agent": "true"
+  },
+
+  "containerUser": "default_user",
+  "remoteUser": "default_user",
+
+  "workspaceFolder": "/home/default_user/Playground",
+  "postCreateCommand": "git config --global --add safe.directory /home/default_user/Playground",
+  "postStartCommand": "git config --global --add safe.directory /home/default_user/Playground"
+}
