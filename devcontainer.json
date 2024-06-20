@@ -11,10 +11,6 @@
     "-it"
   ],
 
-  "features": {
-    "ssh-agent": "true"
-  },
-
   "containerUser": "default_user",
   "remoteUser": "default_user",
 
